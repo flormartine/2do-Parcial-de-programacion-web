@@ -1,0 +1,181 @@
+/* ========================================
+   ESTILOS GENERALES
+======================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background: #f9f9f9;
+}
+
+/* ========================================
+   ENCABEZADO PRINCIPAL
+======================================== */
+header {
+  background: linear-gradient(90deg, #f97316, #e11d48);
+  color: white;
+  text-align: center;
+  padding: 40px 0 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+header p {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-top: 5px;
+}
+
+/* ========================================
+   MENÚ DE NAVEGACIÓN
+======================================== */
+nav {
+  background-color: #222;
+  display: flex;
+  justify-content: center;
+  padding: 15px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+}
+
+nav ul li a {
+  color: #ffeb3b;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: color 0.3s, border-bottom 0.3s;
+}
+
+nav ul li a:hover {
+  color: white;
+  border-bottom: 2px solid #ffeb3b;
+}
+
+/* ========================================
+   TÍTULO DE CONTACTO (fuera del encabezado)
+======================================== */
+/* ========================================
+   TÍTULO DE CONTACTO ESTILO "BIENVENIDOS"
+======================================== */
+/* ========================================
+   TÍTULO DE CONTACTO CENTRADO
+======================================== */
+.titulo-contacto {
+  display: block;              /* ocupa toda la línea */
+  text-align: center;          /* centra el texto */
+  font-size: 2rem;
+  font-weight: 700;
+  color: #c62828;
+  margin: 50px 0 25px;
+  position: relative;
+}
+
+/* Línea decorativa centrada debajo del texto */
+.titulo-contacto::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  margin: 8px auto 0;          /* auto centra la línea */
+  background: linear-gradient(90deg, #f97316, #e11d48);
+  border-radius: 2px;
+}
+
+/* ========================================
+   FORMULARIO
+======================================== */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px 80px;
+}
+
+form {
+  background: #fff;
+  width: 100%;
+  max-width: 450px;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-weight: bold;
+  color: #333;
+}
+
+input,
+textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 100%;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #f97316;
+  box-shadow: 0 0 5px rgba(249, 115, 22, 0.5);
+  outline: none;
+}
+
+/* ========================================
+   BOTÓN
+======================================== */
+button {
+  background: linear-gradient(135deg, #f97316, #e11d48);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #e11d48, #c01d34);
+}
+
+/* ========================================
+   MENSAJE FINAL
+======================================== */
+#mensaje-exito {
+  display: none;
+  color: green;
+  text-align: center;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+@media (max-width: 600px) {
+  header h1 { font-size: 1.8rem; }
+  nav ul { flex-direction: column; gap: 15px; }
+}

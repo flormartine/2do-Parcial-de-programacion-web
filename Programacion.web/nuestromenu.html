@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menú - Pizziatan el devorador</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ENCABEZADO PRINCIPAL -->
+  <header class="header-principal">
+    <h1>🍕 Pizziatan el devorador 🍕</h1>
+    <p>Las mejores pizzas de Posadas</p>
+  </header>
+
+  <!-- BARRA DE NAVEGACIÓN CON MENÚ HAMBURGUESA -->
+  <div class="header-nav">
+    <!-- Checkbox oculto para controlar el menú -->
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">☰</label>
+
+    <!-- Navegación -->
+    <nav class="nav">
+      <ul>
+        <li><a href="index.html#inicio">Inicio</a></li>
+        <li><a href="index.html#nosotros">Nosotros</a></li>
+        <li><a href="index.html#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- CONTENEDOR PRINCIPAL -->
+  <div class="container">
+    <!-- SECCIÓN MENÚ -->
+    <section id="menu">
+      <h2>Nuestras Pizzas</h2>
+      <div class="pizzas">
+        
+        <!-- Pizza 1 -->
+        <div class="pizza-card">
+          <img src="imagenes/muzzarela.jpg" alt="Pizza Muzzarela" class="pizza-img">
+          <h3>Muzzarela</h3>
+          <p>Salsa de tomate, mozzarella, aceitunas y orégano.</p>
+          <p class="precio">$7.000</p>
+          <button class="btn-agregar">Agregar</button>
+        </div>
+        
+        <!-- Pizza 2 -->
+        <div class="pizza-card">
+          <img src="imagenes/pesto.jpg" alt="Pizza Pesto" class="pizza-img">
+          <h3>Pesto</h3>
+          <p>Salsa de tomate, mozzarella, ajo, perejil, aceitunas y orégano.</p>
+          <p class="precio">$7.500</p>
+          <button class="btn-agregar">Agregar</button>
+        </div>
+        
+        <!-- Pizza 3 -->
+        <div class="pizza-card">
+          <img src="imagenes/pizza-doble-queso-.avif" alt="Pizza Doble Queso" class="pizza-img">
+          <h3>Doble Queso</h3>
+          <p>Mozzarella x2, salsa de tomate, aceitunas, orégano.</p>
+          <p class="precio">$10.000</p>
+          <button class="btn-agregar">Agregar</button>
+        </div>
+        
+        <!-- Pizza 4 -->
+        <div class="pizza-card">
+          <img src="imagenes/napolitana.jpg" alt="Pizza Napolitana" class="pizza-img">
+          <h3>Napolitana</h3>
+          <p>Salsa de tomate, mozzarella, rodajas de tomate, aceitunas y orégano.</p>
+          <p class="precio">$8.500</p>
+          <button class="btn-agregar">Agregar</button>
+        </div>
+        
+        <!-- Pizza 5 -->
+        <div class="pizza-card">
+          <img src="imagenes/fugazza.jpeg" alt="Pizza Fugazza" class="pizza-img">
+          <h3>Fugazza</h3>
+          <p>Salsa de tomate, cebolla , mozzarella, aceitunas y orégano.</p>
+          <p class="precio">$8.000</p>
+          <button class="btn-agregar">Agregar</button>
+        </div>
+        
+        <!-- Pizza 6 -->
+        <div class="pizza-card">
+          <img src="imagenes/calabresa.jpeg" alt="Pizza Calabresa" class="pizza-img">
+          <h3>Calabresa</h3>
+          <p>Mozzarella, salsa, rodajas de salamin, aceitunas, morrón y orégano</p>
+          <p class="precio">$9.000</p>
+          <button class="btn-agregar">Agregar</button>
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- SECCIÓN OPINIONES -->
+    <section id="opiniones">
+      <h2>Opiniones de Nuestros Clientes</h2>
+      
+      <div class="opiniones">
+        <div class="opinion">
+          <img src="imagenes/lucia.jpeg" alt="Lucía Fernández">
+          <p>"La mejor pizza que probé en Posadas. Masa perfecta y atención excelente."</p>
+          <div class="estrellas">⭐⭐⭐⭐⭐</div>
+          <strong>- Lucía Fernández</strong>
+        </div>
+
+        <div class="opinion">
+          <img src="imagenes/marti.jpeg" alt="Martín Gómez">
+          <p>"La promo 2x1 del fin de semana es lo mejor. ¡Volveré seguro!"</p>
+          <div class="estrellas">⭐⭐⭐⭐</div>
+          <strong>- Martín Gómez</strong>
+        </div>
+
+        <div class="opinion">
+          <img src="imagenes/carla.avif" alt="Carla Ruiz">
+          <p>"Increíble sabor y presentación. Se nota la calidad."</p>
+          <div class="estrellas">⭐⭐⭐⭐⭐</div>
+          <strong>- Carla Ruiz</strong>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- PIE DE PÁGINA -->
+  <footer>
+    <p><strong>Pizziatan el devorador</strong></p>
+    <p>🍕 Las mejores pizzas de Posadas 🍕</p>
+    <p style="margin-top: 1rem; font-size: 0.9rem;">&copy; Pizziatan el devorador. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

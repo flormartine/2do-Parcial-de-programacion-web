@@ -1,0 +1,585 @@
+/* ========================================
+   ESTILOS GENERALES
+======================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    opacity: 0;
+    animation: aparecer 0.8s ease-in-out forwards;
+    background-color: #f7f5f2;
+}
+
+@keyframes aparecer {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.pizza-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+/* ========================================
+   ENCABEZADO
+======================================== */
+header {
+    background: linear-gradient(135deg, #e48509 0%, #e03131 100%);
+    color: white;
+    padding: 3rem 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    position: relative;
+}
+
+header::before {
+    content: '🍕';
+    font-size: 4rem;
+    display: block;
+    margin-bottom: 1rem;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+header p {
+    font-size: 1.3rem;
+    opacity: 0.95;
+    font-style: italic;
+}
+
+/* ========================================
+   NAVEGACIÓN TRADICIONAL (index.html)
+======================================== */
+nav {
+    background-color: #2b2b2b;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+}
+
+nav li {
+    margin: 0 1.5rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffd43b;
+    font-weight: 600;
+    transition: color 0.3s;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+nav a:hover {
+    color: #ff922b;
+}
+
+/* ========================================
+   MENÚ HAMBURGUESA (nuestromenu.html)
+======================================== */
+.navbar-hamburguesa {
+    background-color: #2b2b2b;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* Ocultar el checkbox */
+#menu-toggle {
+    display: none;
+}
+
+/* Ícono del menú hamburguesa */
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    width: 35px;
+    height: 30px;
+    justify-content: center;
+    z-index: 1001;
+}
+
+.menu-icon span,
+.menu-icon .linea {
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #ffd43b;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+/* Menú de navegación */
+.nav-menu,
+.menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #2b2b2b;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    z-index: 999;
+}
+
+.nav-menu li,
+.menu li {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    border-bottom: 1px solid rgba(255, 212, 59, 0.1);
+}
+
+.nav-menu li:last-child,
+.menu li:last-child {
+    border-bottom: none;
+}
+
+.nav-menu a,
+.menu a {
+    display: block;
+    padding: 1.2rem 0;
+    text-decoration: none;
+    color: #ffd43b;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover,
+.menu a:hover {
+    color: #ff922b;
+    background-color: rgba(255, 146, 43, 0.1);
+}
+
+/* Mostrar menú cuando el checkbox está marcado */
+#menu-toggle:checked ~ .nav-menu,
+#menu-toggle:checked ~ .menu {
+    max-height: 400px;
+}
+
+/* Animación del ícono hamburguesa a X */
+#menu-toggle:checked + .menu-icon span:nth-child(1),
+#menu-toggle:checked + .menu-icon .linea:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+#menu-toggle:checked + .menu-icon span:nth-child(2),
+#menu-toggle:checked + .menu-icon .linea:nth-child(2) {
+    opacity: 0;
+}
+
+#menu-toggle:checked + .menu-icon span:nth-child(3),
+#menu-toggle:checked + .menu-icon .linea:nth-child(3) {
+    transform: rotate(-45deg) translate(8px, -8px);
+}
+
+/* ========================================
+   CONTENEDOR PRINCIPAL
+======================================== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* ========================================
+   SECCIONES
+======================================== */
+section {
+    margin: 3rem 0;
+    padding: 2.5rem;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+section h2 {
+    color: #c92a2a;
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+    text-align: center;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, #c92a2a, #ff922b);
+}
+
+section p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* ========================================
+   GRID DE PIZZAS
+======================================== */
+.pizzas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.pizza-card {
+    background: linear-gradient(145deg, #fff, #f8f9fa);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 3px solid #ffe8cc;
+    position: relative;
+    overflow: hidden;
+}
+
+.pizza-card::before {
+    content: '🍕';
+    position: absolute;
+    font-size: 8rem;
+    opacity: 0.05;
+    right: -20px;
+    bottom: -20px;
+}
+
+.pizza-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(201, 42, 42, 0.3);
+    border-color: #ff922b;
+}
+
+.pizza-card h3 {
+    color: #c92a2a;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.pizza-card p {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.precio {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2b8a3e;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+/* ========================================
+   BOTONES
+======================================== */
+.btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #c92a2a 0%, #e03131 100%);
+    color: white;
+    padding: 1rem 2.5rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-top: 1rem;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+}
+
+.btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 20px rgba(201, 42, 42, 0.4);
+}
+
+.btn-agregar {
+    display: block;
+    width: 100%;
+    margin-top: 1rem;
+    background: linear-gradient(135deg, #ff922b 0%, #e03131 100%);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    padding: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.btn-agregar:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(255, 146, 43, 0.4);
+}
+
+/* ========================================
+   BANNER ESPECIAL
+======================================== */
+.banner-especial {
+    background: linear-gradient(135deg, #ff922b 0%, #fd7e14 100%);
+    color: white;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    margin: 2rem 0;
+    box-shadow: 0 4px 12px rgba(255, 146, 43, 0.3);
+}
+
+.banner-especial h3 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* ========================================
+   HORARIOS
+======================================== */
+.horarios {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+
+.horarios h3 {
+    color: #c92a2a;
+    margin-bottom: 1rem;
+}
+
+.horarios p {
+    text-align: left;
+    margin-bottom: 0.5rem;
+}
+
+/* ========================================
+   OPINIONES
+======================================== */
+#opiniones {
+    background: #fff8f0;
+    padding: 3rem 2rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin-top: 3rem;
+}
+
+.opiniones {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.opinion {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.opinion:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(255,146,43,0.3);
+}
+
+.opinion img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid #ff922b;
+}
+
+.opinion p {
+    font-style: italic;
+    color: #444;
+    margin-bottom: 0.5rem;
+}
+
+.estrellas {
+    color: #f7f305;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* ========================================
+   FOOTER
+======================================== */
+footer {
+    background-color: #2b2b2b;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+.social {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+@media (max-width: 768px) {
+    /* Headers */
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header::before {
+        font-size: 3rem;
+    }
+
+    /* Navegación tradicional */
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav li {
+        margin: 0.5rem 1rem;
+    }
+
+    /* Contenedor */
+    .container {
+        padding: 1rem;
+    }
+
+    /* Secciones */
+    section {
+        padding: 1.5rem;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+
+    /* Grid de pizzas */
+    .pizzas {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Desktop - Menú horizontal para pantallas grandes */
+@media (min-width: 769px) {
+    .menu-icon {
+        display: none;
+    }
+    
+    .navbar-hamburguesa .nav-menu,
+    .navbar-hamburguesa .menu {
+        position: static;
+        display: flex !important;
+        flex-direction: row;
+        max-height: none;
+        box-shadow: none;
+        background: transparent;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .navbar-hamburguesa .nav-menu li,
+    .navbar-hamburguesa .menu li {
+        border-bottom: none;
+    }
+
+    .navbar-hamburguesa .nav-menu a,
+    .navbar-hamburguesa .menu a {
+        padding: 0.5rem 0;
+    }
+}
+#oferta {
+  background: #111;
+  color: #f4c542;
+  text-align: center;
+  padding: 30px;
+  font-family: 'Poppins', sans-serif;
+}
+#contador {
+  font-size: 70px;
+  margin: 10px;
+}
+#barra {
+  height: 10px;
+  width: 100%;
+  background: #f4c542;
+  transition: width 1s linear;
+}
+.botones button {
+  background: transparent;
+  border: 2px solid #f4c542;
+  color: #f4c542;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 5px;
+}
+.botones button:hover {
+  background: #f4c542;
+  color: #111;
+}
+@media (max-width: 600px) {
+  #contador {
+    font-size: 50px;
+  }
+}
+
+
+

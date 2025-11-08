@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzería Bella Napoli</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ENCABEZADO -->
+    <header>
+        <h1>🍕 Pizziatan el devorador 🍕</h1>
+        <p>Las mejores pizzas de posadas</p>
+    </header>
+    
+    <!-- MENÚ DE NAVEGACIÓN -->
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="nuestromenu.html">Nuestro Menú</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="promociones.html">Promociones</a></li>
+        </ul>
+    </nav>
+
+    <!-- CONTENEDOR PRINCIPAL -->
+    <div class="container">
+        
+        <!-- SECCIÓN INICIO -->
+        <section id="inicio">
+            <h2>Bienvenidos</h2>
+            <p>En Pizziatan preparamos las mejores pizzas de la ciudad con ingredientes frescos y recetas tradicionales.</p>
+            <p>Nuestra masa se hace con levadura madre y nuestros ingredientes son de primera calidad.</p>
+            <a href="nuestromenu.html" class="btn">Ver Menú</a>
+        </section>
+
+        <!-- BANNER DE PROMOCIÓN -->
+        <section id="oferta">
+        <h2>⏰ ¡Oferta por tiempo limitado!</h2>
+        <div id="contador">9</div>
+        <div id="barra"></div>
+        <div id="mensaje"></div>
+         <div class="botones">
+         <button onclick="iniciarOferta()">Iniciar</button>
+         <button onclick="detenerOferta()">Pausar</button>
+    </div>
+</section>
+<script src="temporizador.js"></script>
+
+        <!-- SECCIÓN NOSOTROS -->
+        <section id="nosotros">
+            <h2>Nuestra Historia</h2>
+            <p>Después de conversar con mi familia sobre emprender en el rubro gastronómico, decidimos abrir un local dedicado a la venta de pizzas.</p>
+            <p>Gracias a mi experiencia y formación en cocina, especialmente en la elaboración de pizzas caseras, elegí este camino para combinar pasión y conocimiento.</p>
+            <p>Tras reunirnos con vecinos y la comisión del barrio, confirmamos el interés en contar con esta propuesta, lo que nos motiva a ofrecer un servicio de calidad y un sabor auténtico en cada pizza.</p>
+        </section>
+
+        <!-- SECCIÓN CONTACTO -->
+        <section id="contacto">
+            <h2>Pedí a Domicilio</h2>
+            
+            <div class="horarios">
+                <h3>📍 Ubicación</h3>
+                <p><strong>Dirección:</strong> Calle 61, Barrio los Paraisos Posadas, Misiones</p>
+                <p><strong>WhatsApp:</strong> +54 9 376 5294944</p>
+            </div>
+            
+            <div class="horarios" style="margin-top: 1.5rem;">
+                <h3>🕐 Horarios</h3>
+                <p><strong>Viernes</strong> 20:00 - 00:00</p>
+                <p><strong>Sábado:</strong> 20:00 - 00:00</p>
+                <p><strong>Domingo:</strong> 20:00 - 00:00</p>
+            </div>
+            
+            <a href="tel:3765294944" class="btn">Pedilas</a>
+        </section>
+        
+      
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p><strong>Pizziatan el devorador</strong></p>
+        <p>🍕 Las mejores pizzas de Posadas 🍕</p>
+        <div class="social">
+             Instagram |  Facebook |
+        </div>
+        <p style="margin-top: 1rem; font-size: 0.9rem;">&copy; Pizziatan el devorador. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

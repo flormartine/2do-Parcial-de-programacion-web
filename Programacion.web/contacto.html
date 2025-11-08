@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto - Pizziatan el devorador 🍕</title>
+  <link rel="stylesheet" href="contacto.css">
+</head>
+<body>
+
+  <!-- ENCABEZADO -->
+  <header>
+    <h1>🍕 Pizziatan el devorador 🍕</h1>
+    <p>Las mejores pizzas de Posadas</p>
+  </header>
+
+  <!-- MENÚ DE NAVEGACIÓN -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="nuestroMenu.html">Nuestro Menú</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="promociones.html">Promociones</a></li>
+      <li><a href="contacto.html" class="activo">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main>
+    <!-- TÍTULO DE SECCIÓN (ahora fuera del encabezado visual) -->
+    <h2 class="titulo-contacto">Formulario de Contacto</h2>
+
+    <!-- FORMULARIO -->
+    <section class="container">
+      <form id="contactForm">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" placeholder="tuemail@ejemplo.com" required>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" placeholder="Ej: 1122334455" required>
+
+        <label for="mensaje">Mensaje o pedido:</label>
+        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribí tu mensaje o pedido aquí..." required></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+
+      <!-- Mensaje de confirmación -->
+      <p id="mensaje-exito">¡Gracias por contactarte con Pizziatan! Te responderemos pronto 🍕</p>
+    </section>
+  </main>
+
+  <script src="frontend/contacto.js"></script>
+
+</body>
+</html>
